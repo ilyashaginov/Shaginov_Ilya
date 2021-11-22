@@ -6,16 +6,16 @@
 </head>
 <body>
     <h1 align="center">Заголовок первого уровня</h1>
-    <h3> Предварительно форматированный текст: <h3>
-    <p></p>
+    <h3> Предварительно форматированный текст: </h3>
+    <pre>
     × | ∘ | &nbsp&nbsp<br>
     ‐‐‐‐‐‐‐‐‐‐‐<br>
-    &nbsp&nbsp  | × |&nbsp&nbsp<br>
+    &nbsp&nbsp| × |&nbsp&nbsp<br>
     ‐‐‐‐‐‐‐‐‐‐‐<br>
-    ∘ | × | ∘<br></p> 
+    ∘ | × | ∘<br></pre> 
     <hr>
     <h3>Тег address</h3>
-    <p><i>Kuprevicha, 1/1, 220141, Minsk, Belarus. Phone: +375.17.2686911</i></p>
+    <address>Kuprevicha, 1/1, 220141, Minsk, Belarus. Phone: +375.17.2686911</address>
     <hr>
     <h3>Семантические и функциональные строчные теги</h3>
     <p>Пожелания автора:<br>
@@ -26,29 +26,29 @@
     <p>Цитата короткая:<br>
         <i>И всё­таки она вертится!</i><br><br>
         Цитата занимающая несколько предложений:<br><br> <!-- можно ли яем-то заменить большое кол-во символов пробела?-->
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp О сколько нам открытий чудных<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Готовят просвещенья дух<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp И опыт, сын ошибок трудных,<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp И гений, парадоксов друг,<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp И случай, бог изобретатель...</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; О сколько нам открытий чудных<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Готовят просвещенья дух<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; И опыт, сын ошибок трудных,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; И гений, парадоксов друг,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; И случай, бог изобретатель...</p>
     <hr> <!-- Нало ли переность <hr> на новую строку?-->
     <h3>Семантические и функциональные строчные теги</h3>
-    <p><b>Тэг &#60STRONG&#62; делает данный фрагмент текста более важным. </b><i> Тэг &#60em&#62 менее важным.</i> 
-        В то время как теги &#60b&#62 и &#60i&#62 делают текст просто <b>полужирным</b> и <i>курсивом</i> соответственно.</p>
+    <p><b>Тэг &#60;STRONG&#62; делает данный фрагмент текста более важным. </b><i> Тэг &#60;em&#62; менее важным.</i> 
+        В то время как теги &#60;b&#62; и &#60;i&#62; делают текст просто <b>полужирным</b> и <i>курсивом</i> соответственно.</p>
     <h3>Теги форматирования машинного языка</h3>
-    <p>При выполнении программного кода на языке PERL:<br><br>
+    <code>При выполнении программного кода на языке PERL:<br><br>
         <span style="font-family:Courier, monospace"> #!/usr/local/bin/perl<br>
             print "Content‐type: text/html\n\n";<br>
-            print "&#60H1&#62Hello World&#60H1&#62\n";</span><br><br>
+            print "&#60;H1&#62;Hello World&#60;H1&#62;\n";</span><br><br>
         Программа выведет:<br><br>
         <span style="font-family:Courier, monospace"> Hello, World!</span><br><br>  <!-- стоит ли прерывать тег <p> для встраивания <span> или это не важно? Отсюда еще 1 вопрос, критична ли захламленность тегами и как этого избежать?--> 
-        Однако в браузере у нас будет отображаться результат выполнения этой программы:</p>
+        Однако в браузере у нас будет отображаться результат выполнения этой программы:</code>
     <h1>Hello, World!</h1>
     <hr>
     <h3>Комментарии и литералы(мнемоники) в HTML</h3>
     <span style="font-family:Courier, monospace"> &#60!‐‐ это комментарий ‐‐&#62<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#60!‐‐ и это также комментарий,<br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp занимающий более одной строки ‐‐&#62</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#60;!‐‐ и это также комментарий,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; занимающий более одной строки ‐‐&#62;</span>
     <hr>
     <h3>Теги над­ и подстрочных символов</h3>   
     <p align="center"><b>Магазин работает:</b><br><br>
@@ -57,8 +57,8 @@
         выходной: <u>суббота</u>, <u>воскресенье</u></p>
     <hr>
     <h3>Вот такой текст<br><br> <!-- так можно сделать пробелами как я, можно над и подстрочными тегами, можно поискать щрифт, я выбрал пробелы, но в правильности не увверен-->
-        Э &nbsp о  &nbsp р  &nbsp с  &nbsp о  &nbsp е  &nbsp ё  &nbsp ы  &nbsp т  &nbsp к  &nbsp т <br>
-        &nbsp&nbsp т &nbsp п &nbsp о &nbsp т &nbsp в &nbsp с &nbsp л &nbsp й &nbsp е &nbsp с</h3> 
+        Э &nbsp; о  &nbsp; р  &nbsp; с  &nbsp; о  &nbsp; е  &nbsp; ё  &nbsp; ы  &nbsp; т  &nbsp; к  &nbsp; т <br>
+        &nbsp;&nbsp; т &nbsp; п &nbsp; о &nbsp; т &nbsp; в &nbsp; с &nbsp; л &nbsp; й &nbsp; е &nbsp; с</h3> 
     <hr>
     <h3>Акроним и курсив</h3>
     <p>ТФ: Y(<i>x)=e­<sup>-iπx</sup></i>+log<sub><i>x</i></sub>4</p>
