@@ -5,11 +5,14 @@
     <title>Таблица</title>
 </head>
 <body>
-    <table border="1" width="50%"> 
+    <table border="1" width="50%" align="center" valign="middle">  <!-- почему не работает выравние по вертикали всей таблицы valign="middle"-->
+        <thead>
         <caption><i>Прогноз погоды</i></caption>
         <tr>
             <th>Город</th> <th>Утро</th> <th>День</th><th>Вечер</th><th>Ночь</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <th>Минск</th>
             <td>-5&#176;</td>
@@ -23,6 +26,7 @@
             <td>+9<sup>0</sup></td>
             <td>-4<sup>0</sup></td>
         </tr>
+    </tbody> <!-- нормально ли для симантики отсутствие <tfoot> и иных т.п. частей -->
     </table>
 </body>
 </html>
