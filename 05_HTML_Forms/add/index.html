@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+</head>
+<body>
+    <h1 align="center">Заполните анкету</h1>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get">
+    <fieldset>
+        <legend>Личные данные</legend>
+        <input type="text" name="name" name="request" maxlength="25" pattern="[А-Яа-яЁё]{1,25}" placeholder="Фамилия" required autofocus><span>text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле</span><br>
+        <input type="text" name="surname"  name="request" maxlength="20" pattern="[А-Яа-яЁё]{1,20}" placeholder="Имя" required><span>text: Только кириллица, без пробелов, длина поля 20, обязательное поле</span><br>
+        <input type="text" name="patronymic"  name="request" maxlength="24" pattern="[А-Яа-яЁё]{1,24}" placeholder="Отчество" required><span>text: Только кириллица, без пробелов, длина поля 24, обязательное поле</span><br>
+        <input type="submit">
+        <fieldset>
+            <legend>Паспортные данные</legend>
+            <span> Серия - только заглавные две латинские буквы с длинной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле</span><br>
+            <span> text: Номер паспорта -  только цифры с длинной 7 и максимальным количеством символов 7, количество цифр не меньшн 7, обязательное поле</span><br>
+            <input type="text" name="passport series" maxlength="2" size="2" pattern="[A-Z]{2}" placeholder="AA" required>
+            <input type="text" name="passport number" maxlength="7" size="7" pattern="[0-9]{7}" placeholder="1234567" required>
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <input type="text" name="year" maxlength="4" size="4" pattern="[0-9]{4}" placeholder="2000"> <span>text: Год рождения 4-е цифры</span><br>
+            <select name="month">
+                <option value="1"selected>Январь</option>
+                <option value="2">Февраль</option>
+                <option value="3">Март</option> 
+                <option value="4">Апрель</option>
+                <option value="5">Май</option>
+                <option value="6">Июнь</option>
+                <option value="7">Июль</option>
+                <option value="8">Август</option>
+                <option value="9">Сентябрь</option>
+                <option value="10">Октябрь</option>
+                <option value="11">Ноябрь</option>
+                <option value="12">Декабрь</option>                                                       
+            </select><span>select: Месяц рождения</span><br>
+            <input type="number" name="day" min="1" max="31"> <span>number: Диапазон от 1 до 31 с шагом 1</span>
+        </fieldset>
+        <select name="nationality" required>
+            <option value="21"selected>РБ</option>
+            <option value="22">РФ</option>
+            <option value="23">США</option>
+            <option value="24">КНДР</option>
+            <option value="25">НЛО</option>
+        </select><span>(Национальность - выбор одного значения из списка, обязательное поле)<br> Адрес:</span><br>
+        <textarea name="address"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Интересы</legend>
+        <fieldset>
+            <legend>array: Хобби</legend>
+            <input type="checkbox" name="hobby1"><span>Рыбалка</span><br>
+            <input type="checkbox" name="hobby2"><span>Астраномия</span><br>
+            <input type="checkbox" name="hobby3"><span>Дайвинг</span><br>
+            <input type="checkbox" name="hobby4"><span>Марки</span><br>
+        </fieldset>
+        <fieldset>
+            <legend>Дмоашние животные(возможность выбора нескольких вариантов)</legend>
+            <span>array: select multiple</span><br>
+            <select multiple name="pets" size="12"> <!-- почему не работает multiple? -->
+                <optgroup label="Попугаи">
+                    <option value="31">Волнистый</option>
+                    <option value="32">Ара</option>
+                    <option value="33">Неразлучник</option>
+                </optgroup>
+                <optgroup label="Рыбы">
+                    <option value="34">Акула</option>
+                    <option value="35">Синий кит</option>
+                    <option value="36">Кракен</option>
+                </optgroup>
+                <optgroup label="Птицы">
+                    <option value="37">Стая ворон</option>
+                    <option value="38">Археоптерикс</option>
+                    <option value="39">Птеродактель</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Данные для входа и восстановления пароля</legend>
+            <input type="text" name="login" maxlength="20" pattern="[A-Za-z]{5,20}" placeholder="Логин" required ><span> text: Только латиница, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле</span><br>
+            <input type="password" name="password" maxlength="20" pattern="[A-Za-z]{10,20}" placeholder="Пароль" autocomplete="off" required ><span> password: Только латиница, без пробелов, не менее 10 символов, длинна поля 20, обязательное поле, отключить автозаполнение</span>
+        </fieldset>
+        <fieldset>
+            <legend>Координаты:</legend>
+            <input type="email" name="email" placeholder="введите адрес почты"><span> email: проверка должна осуществляться при помощи новых атрибутов тега &#60;input&#62;</span><br>
+            <input type="url" name="url" placeholder="введите адрес сайта"><span> url: проверка должна осущетвляться при помощи новых атрибутов тега &#60;input&#62; </span>
+        </fieldset>
+        <fieldset>
+            <legend>Цифры</legend>
+            <input type="number" min="-2.5" max="2.5" step="0.1"><span> number: Диапазон от -2.5 до 2.5 с шагом 0.1 </span><br>
+            <input type="range" min="1" max="10"><span> range: Максимальное 10 минимальное 1 </span>
+        </fieldset>
+        <fieldset>
+            <legend>Кнопки управления</legend>
+            <input type="submit">
+            <input type="reset"><br>
+            <input type="image" src="email.jpg" disabled> <span>- при нажатии на эту кнопку ничего не происходит</span>
+        </fieldset>
+    </fieldset>
+    </form>
+</body>
+</html>
